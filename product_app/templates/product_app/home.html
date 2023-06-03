@@ -1,0 +1,287 @@
+{% extends 'main.html'%}
+    <!-- Header -->
+
+    {% block content%}
+  
+    <div class="header">
+        <div class="hero-section">
+            <div>
+                <h1 class="heading">Products <span id="headmove"></span>|</h1>
+                <p>Get personalized online tutoring from India's top educators</p>
+            </div>
+            <div>
+                <button>
+                    <span id="sl"><a href="{%url 'enquiry-page' %}">Enquiry now</a></span>
+                </button>
+            </div>
+
+        </div>
+        
+    </div>
+
+    {% include 'product_app/pricing.html'%}
+   
+    <!-- Main Content -->
+    {% include 'product_app/related-products.html'%}
+    
+    
+    <h2 class="sectionheader text-center">Popular Courses
+        <hr class="hdrbtm">
+    </h2>
+    <section class="courses-section">
+      
+        <div class="course-card">
+            <img src="static\styles\images\course1.jpg" alt="Course 1"> 
+            <div>
+            <h3>Mathematics</h3>
+            <p>Master mathematical concepts with interactive lessons and practice</p>
+            <a href="#" class="course-btn">Buy</a>
+            <a href="#" class="course-btn">Check Sample</a>
+            </div>
+        </div>
+        <div class="course-card">
+            <img src="static\styles\images\course2.jpg" alt="Course 2">
+            <div>
+            <h3>Science</h3>
+            <p>Learn science through engaging experiments and simulations</p>
+            <a href="#" class="course-btn">Buy</a>
+            <a href="#" class="course-btn">Check Sample</a>
+        </div>
+        </div>
+        <div class="course-card">
+            <img src="static\styles\images\course4.jpg" alt="Course 3">
+            <div>
+            <h3>English</h3>
+            <p>Improve your English skills with interactive lessons and practice</p>
+            <a href="#" class="course-btn">Buy</a>
+            <a href="#" class="course-btn">Check Sample</a>
+           
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <h2 class="sectionheader text-center">Meet Our Team
+        <hr class="hdrbtm">
+    </h2>
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="static/styles/Responsive Card Slider/images/profile1.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name text-primary">David Dell</h2>
+                        <h3 class="name">Web Developer</h3>
+                        <p class="description">The lorem text the section that contains header with having open
+                            functionality.</p>
+
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="static/styles/Responsive Card Slider/images/pintu.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name text-primary">Purushottam Patidar</h2>
+                        <h3 class="name">Web Developer & Backend Engineer</h3>
+                        <p class="description">Pursuing Master Of Computer Application from NIT Trichy</p>
+
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="static/styles/Responsive Card Slider/images/profile3.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name text-primary">Vijay Patidar</h2>
+                        <h3 class="name">CEO & Managing Director</h3>
+                        <p class="description">Currently understanding the marketing strategy to increase productivity.</p>
+
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="static/styles/Responsive Card Slider/images/profile6.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name text-primary">Drashti Bhatnagar</h2>
+                        <h3 class="name">Managing Client & Schedule</h3>
+                        <p class="description">The lorem text the section that contains header with having open
+                            functionality.</p>
+
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- End of Testimonial -->
+
+
+    <!-- customer review -->
+    <div id="customer-review" class="content">
+
+        <div class="container ">
+            <div class="row mb-5 ">
+                <div class="col-12 text-center">
+                    <h2 class="sectionheader">Customer Review
+                        <hr class="hdrbtm">
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="site-section bg-left-half mb-5">
+            <div class="container owl-2-style">
+
+
+                <div class="owl-carousel owl-2">
+
+                    <div class="media-29101">
+                        <img src="static/styles/Customer Review/images/person_1_sm.jpg" alt="Image" class="img-fluid">
+                        <h3><a href="#">Alex Fought</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem iusto officia! Quis
+                            tenetur maxime, laboriosam saepe, voluptate necessitatibus tempora!</p>
+                    </div>
+
+                    <div class="media-29101">
+                        <img src="static/styles/Customer Review/images/person_2_sm.jpg" alt="Image" class="img-fluid">
+                        <h3><a href="#">Ben Stafford</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem iusto officia! Quis
+                            tenetur maxime, laboriosam saepe, voluptate necessitatibus tempora!</p>
+                    </div>
+
+                    <div class="media-29101">
+                        <img src="static/styles/Customer Review/images/person_3_sm.jpg" alt="Image" class="img-fluid">
+                        <h3><a href="#">Devin Bridges</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem iusto officia! Quis
+                            tenetur maxime, laboriosam saepe, voluptate necessitatibus tempora!</p>
+                    </div>
+
+                    <div class="media-29101">
+                        <img src="static/styles/Customer Review/images/person_1_sm.jpg" alt="Image" class="img-fluid">
+                        <h3><a href="#">Joshua Jones</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem iusto officia! Quis
+                            tenetur maxime, laboriosam saepe, voluptate necessitatibus tempora!</p>
+                    </div>
+
+                    <div class="media-29101">
+                        <img src="static/styles/Customer Review/images/person_2_sm.jpg" alt="Image" class="img-fluid">
+                        <h3><a href="#">Kellie Kenney</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem iusto officia! Quis
+                            tenetur maxime, laboriosam saepe, voluptate necessitatibus tempora!</p>
+                    </div>
+
+                    <div class="media-29101">
+                        <img src="static/styles/Customer Review/images/person_3_sm.jpg" alt="Image" class="img-fluid">
+                        <h3><a href="#">Will Reagan</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem iusto officia! Quis
+                            tenetur maxime, laboriosam saepe, voluptate necessitatibus tempora!</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--end of customer review  -->
+    <section>
+        <div class="formdiv">
+            <div class="form-detail">
+                <h3>Give Feedback</h3>
+                <p>Ask any relevant question and give feedback </p>
+                <li><a href="">Address: Gajanand nagar , Khajrana, Jaipur 452001</a></li>
+                <li><a href="">Phone: +918823083040</a></li>
+                <li><a href="">Email: pintupatidar555@gmail.com</a></li>
+
+            </div>
+            <div class="form-section">
+                <form action="">
+                    <h3>Drop your message here</h3>
+                    <label for="fullname">Full Name</label>
+                    <input type="text" name="fullname">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="">
+                    <label for="subject">Subject</label>
+                    <input type="text" name="" id="">
+                    <label for="message">Message</label>
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+ 
+
+ 
+
+
+    <!-- JAVA-SCRIPT SECTION -->
+
+
+    <script>
+        var headmove = document.getElementById('headmove');
+        var headingTexts = ["completely tested.", "having quality.", "best from others."];
+        var i = 1, j = 0;
+        var size = 0;
+        var str;
+        f()
+        function f() {
+            headmove.innerHTML = "";
+            str = headingTexts[i];
+            size = headingTexts[i].length;
+            i = (i + 1) % 3, j = 0;
+            typerWriter();
+        }
+
+        function typerWriter() {
+            if (j < size) {
+                headmove.innerHTML += str.charAt(j);
+                j++;
+                setTimeout(typerWriter, 100);
+            } else f();
+        }
+
+    </script>
+
+{% endblock content %}

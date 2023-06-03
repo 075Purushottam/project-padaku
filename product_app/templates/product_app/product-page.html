@@ -1,0 +1,22 @@
+{% extends 'main.html'%}
+{% block content%}
+<div class="product-header">
+    <div class="product-picture"><img src="static\styles\images/f3 (1).jpg" alt=""></div>
+    <div class="product-detail">
+        <div class="product-title"><h2>Product Title</h2></div>
+        <div class="price-rating">
+            <li>Price</li>
+            <li>Rating</li>
+        </div>
+        <div class="description">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla fuga reprehenderit eos aut, harum voluptates qui eius delectus, cumque consequuntur laboriosam! Adipisci veritatis, libero laboriosam ex qui neque minus at!</p>
+        </div>
+        <div class="purchase"><a href="">Purchase now</a></div>
+    </div>
+</div>
+
+<div class="recom-prod">
+    {% include 'product_app/related-products.html' %}
+</div>
+
+{% endblock content%}
