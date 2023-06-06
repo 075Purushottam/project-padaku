@@ -1,7 +1,6 @@
 {% extends 'main.html'%}
 {% block content%}
 <div class="product-header">
-    <div class="product-picture"><img src="static\styles\images/f3 (1).jpg" alt=""></div>
     <div class="product-detail">
         <div class="product-title"><h2>Product Title</h2></div>
         <div class="price-rating">
@@ -11,12 +10,58 @@
         <div class="description">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla fuga reprehenderit eos aut, harum voluptates qui eius delectus, cumque consequuntur laboriosam! Adipisci veritatis, libero laboriosam ex qui neque minus at!</p>
         </div>
-        <div class="purchase"><a href="">Purchase now</a></div>
+        <div class="purchase"><a href="{%url 'enquiry-page' %}">Purchase now</a>
+            <a href="">Check Sample</a>
+            <a href="static\styles\brochure\Database Security.docx" download>Download Syllabus</a>
+        </div>
+        
     </div>
 </div>
 
-<div class="recom-prod">
-    {% include 'product_app/related-products.html' %}
+<div class="why">
+    <h1 class="ml-5 sec-header1">Why choose Padaku?<hr class="hdrbtm"></h1>
+    <div class="why-container">
+        <div class="reason-box">
+            <div class="top-part">
+            <img src="/static\styles\images\support.jpg" alt="icon">
+            <h5>Community Support<hr></h5>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem possimus enim dignissimos quo debitis animi maxime quos amet reprehenderit. Dignissimos officia tenetur dolor culpa quisquam tempore officiis in modi! Soluta.</p>
+
+        </div>
+        <div class="reason-box">
+            <div class="top-part">
+            <img src="/static\styles\images\support.jpg" alt="icon">
+            <h5>24/7 Service Available <hr></h5>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem possimus enim dignissimos quo debitis animi maxime quos amet reprehenderit. Dignissimos officia tenetur dolor culpa quisquam tempore officiis in modi! Soluta.</p>
+
+        </div>
+        <div class="reason-box">
+            <div class="top-part">
+            <img src="/static\styles\images\support.jpg" alt="icon">
+            <h5>Quality & Quantity<hr></h5>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem possimus enim dignissimos quo debitis animi maxime quos amet reprehenderit. Dignissimos officia tenetur dolor culpa quisquam tempore officiis in modi! Soluta.</p>
+
+        </div>
+        <div class="reason-box">
+            <div class="top-part">
+            <img src="/static\styles\images\support.jpg" alt="icon">
+            <h5>Updated Material<hr></h5>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem possimus enim dignissimos quo debitis animi maxime quos amet reprehenderit. Dignissimos officia tenetur dolor culpa quisquam tempore officiis in modi! Soluta.</p>
+
+        </div>
+    </div>
+</div>
+
+<div class="product-features">
+    <h1 class="ml-5 sec-header2">What are the main product features?<hr class="hdrbtm"></h1>
+</div>
+
+<div class="comparison">
+    <h1 class="ml-5 sec-header3">How we are best from others?<hr class="hdrbtm"></h1>
 </div>
 
 {% endblock content%}

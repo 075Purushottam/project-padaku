@@ -44,8 +44,18 @@
             </div>
             <ul class="nav-links menu_box">
                 <li><a  href="{% url 'home'%}">Home</a></li>
-                <li><a  href="{% url 'product-page'%}">Courses</a></li>
-                <li><a  href="#">Pricing</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Products <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#">Animation Video</a>
+                            <a href="#">Notes with Mindmapping</a>
+                            <a href="#">English and hindi notes</a>
+                            <a href="#">Other classes</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a  href="#pricing">Pricing</a></li>
                 <li><a  href="#">About Us</a></li>
                 <li><a  href="#customer-review">Review</a></li>
                 <li><a  href="#footer">Contact Us</a></li>
@@ -53,12 +63,15 @@
             {% if request.user.is_authenticated %}
             <p class="my-auto text-primary username">{{request.user|upper}}</p>
             <div class="btns"><a href="{% url 'logout'%}">Logout</a>
+                
             </div>
             {% else %}
             <div class="btns"><a href="{% url 'login'%}">Login</a>
                 <a href="{% url 'register'%}">Signup</a>
             </div>
             {%endif%}
+            <a href="https://wa.me/918517949579"><i class="fa fa-whatsapp text-success"></i></a>
+            
         </div>
     </nav>
 
@@ -73,11 +86,21 @@
             <i class="fa fa-bars" id="ham-menu"></i>
             <ul id="nav-bar">
                 <li><a href="{% url 'home'%}">Home</a> </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Products <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#">Animation Video</a>
+                            <a href="#">Notes with Mindmapping</a>
+                            <a href="#">English and hindi notes</a>
+                            <a href="#">Other classes</a>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="{%url 'enquiry-page' %}">Enquiry now</a> </li>
                 <li><a href="#footer">About</a> </li>
-                <li><a href="{% url 'home'%}">Services</a> </li>
-                <li><a href="#team">Team</a> </li>
-                <li><a href="#customer-review">Review</a> </li>
+                <li><a href="static\styles\brochure\Database Security.docx" download>Download Brochure</a></li>
+               
                 <li><a href="#footer">Contact</a> </li>
             </ul>
         </nav>
@@ -108,10 +131,8 @@
             <div class="col-md-4">
               <h5 class="text-primary border-bottom mb-4">Follow Us</h5>
               <ul class="social-media">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                 <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                <li><a href="#"><i class="fa fa-google"></i></a></li>
               </ul>
             </div>
           </div>

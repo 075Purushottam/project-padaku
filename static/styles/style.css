@@ -11,7 +11,17 @@ body{
 li{
     list-style: none;
 }
-
+.mobile-enquiry{
+    display: none;
+}
+.fa-whatsapp{
+    font-size:35px;
+    margin: 10px 0;
+}
+.fa-google{
+    font-size:35px;
+    margin: 10px 0;
+}
 /* Header */
 .res {
     display: none;
@@ -25,7 +35,48 @@ li{
     /* background: transparent; */
 
 }
+/* drop down */
+.dropbtn {
+    background: transparent;
+    color:#0e1e36;
+    font-size: 18px;
+    padding: 7px;
+    border: none;
+    cursor: pointer;
+  }
 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 4px;
+    background-color: rgba(213, 213, 213, 0.7);
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a{
+    font-size: small;
+  }
+  .dropdown-content a{
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/* end drop down */
 .navlogo{
     line-height: 0.2;
     text-align: center; 
@@ -96,9 +147,9 @@ li{
 .header {
     display: flex;   
     flex-direction: row;
-    background:url(images/f3\ \(2\).jpg) center center/cover no-repeat;
+    background:url(images/main4.jpg) center center/cover no-repeat;
     color: #FFF;
-    height:80%;
+    height:90%;
     box-shadow: 0 4px 2px -3px rgb(231, 231, 231);
 }
 .hero-section {
@@ -184,7 +235,17 @@ li{
     height: fit-content;
     width: 380px;
     border: #0f1232 2px solid;
-    margin: 40px auto;
+    /* margin: 40px auto; */
+    /* margin-right:0;
+    margin-left: auto; */
+    margin-left: auto;
+    margin-right: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+.single-enquiry{
+     margin: 40px auto; 
 }
 .enquiry-form label{
     color: #000;
@@ -235,10 +296,7 @@ li{
     margin-top: 30px;
     gap: 5px;
 }
-
-
-
-  
+ 
 .feature-box {
     flex-basis: 280px;
     min-height: 370px;
@@ -247,12 +305,12 @@ li{
     border: #949494 2px solid;
     border-radius: 2px;
     text-align: center;
+}
+.feature-box:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	-webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
 }
-
 .feature-box img {
     width: 100%;
     max-height: 200px;
@@ -275,11 +333,10 @@ li{
     font-size: 12px;
 }
 .feature-box a{
-    border: 1px solid rgb(39, 39, 138);
     font-size:15px;
     border-radius: 2px;
     margin-bottom: 4px;
-    padding: 2px 12px;
+    padding: 4px 18px;
 }
 .feature-box a:hover{
     color: #FFF;
@@ -438,6 +495,12 @@ footer{
 }
 @media only screen and (max-width: 700px) {
 
+    .web-enq{
+        display: none;
+    }
+    .mobile-enquiry{
+        display: block;
+    }
     .res {
         display: block;
     }
@@ -577,8 +640,8 @@ footer{
     }
 
     .feature-box img {
-        width: 100%;
-        border: #949494 8px solid;
+        width: 80%;
+        border: #949494 1.5px solid;
         border-radius: 3px;
         min-height: fit-content;
         margin-bottom: 12px;
@@ -586,12 +649,44 @@ footer{
 
     .courses-section {
         max-width: 350px;
-        margin: 80px auto;
+        margin: 40px auto;
     }
 
     .form-detail,form-section{
         margin: 0 25px;
        }
+
+       .dropbtn {
+        color:white;
+        font-size: 18px;
+        padding: 7px;
+        border: none;
+        cursor: pointer;
+      }
+    
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        border-radius: 4px;
+        background-color: #0878a0;
+        min-width: 180px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      .dropdown-content a{
+        font-size: small;
+      }
+    
+      
+      .dropdown-content a:hover {
+        background-color: #0878a0;
+    }
+      
    
   }
 

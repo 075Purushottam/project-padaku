@@ -4,25 +4,115 @@
     {% block content%}
   
     <div class="header">
+
         <div class="hero-section">
             <div>
                 <h1 class="heading">Products <span id="headmove"></span>|</h1>
-                <p>Get personalized online tutoring from India's top educators</p>
+                <p>Get personalized online products, tools and other study materials</p>
             </div>
             <div>
                 <button>
-                    <span id="sl"><a href="{%url 'enquiry-page' %}">Enquiry now</a></span>
+                    <span id="sl"><a href="static\styles\brochure\Database Security.docx" download>Download Brochure</a></span>
                 </button>
             </div>
-
         </div>
-        
+        <!-- <img src="static\styles\images\main5.jpg" alt=""> -->
+        <div class="enquiry-form web-enq">
+            
+            <div class="form-section">
+                <form action="">
+                    <h3>Get Enquiry</h3>
+                    <label for="fullname">Full Name</label>
+                    <input type="text" placeholder="Username" name="fullname">
+                    <label for="email">Email Address</label>
+                    <input type="email" placeholder="Email" name="email" id="">
+                    <label for="tel">Mobile Number</label>
+                    <input type="tel" placeholder="Mobile Number" name="mobno" id="">
+                    <label for="tel">Address</label>
+                    <input type="text" placeholder="Address" name="loc" id="">
+                    <label for="subject">Get for</label>
+                    <select name="" id="">
+                        <option value="">School</option>
+                        <option value="">College</option>
+                        <option value="">Institution</option>
+                        <option value="">Coaching</option>
+                        <option value="">Personal</option>
+                        <option value="">Others</option>
+                    </select>
+                    <label for="subject">Choose Class</label>
+                    <select name="" id="">
+                        <option value="">Class 6</option>
+                        <option value="">Class 7</option>
+                        <option value="">Class 8</option>
+                        <option value="">Class 9</option>
+                        <option value="">Class 10</option>
+                        <option value="">Class 11</option>
+                        <option value="">Class 12</option>
+                    </select>
+                    <label for="subject">Choose Products</label>
+                    <select name="" id="">
+                        <option value="">Animation Video</option>
+                        <option value="">Graphic Templates</option>
+                        <option value="">Notes</option>
+                        <option value="">Exam Papers</option>
+                        <option value="">Tutorial Lectures</option>
+                    </select>
+                    <a href="#" class="enquiry-btn">Submit</a>
+                </form>
+            </div>
+        </div>
     </div>
+   
+    
+        <div class="mobile-enquiry enquiry-form">
+            <div class="form-section">
+                <form action="">
+                    <h3>Get Enquiry</h3>
+                    <label for="fullname">Full Name</label>
+                    <input type="text" placeholder="Username" name="fullname">
+                    <label for="email">Email Address</label>
+                    <input type="email" placeholder="Email" name="email" id="">
+                    <label for="tel">Mobile Number</label>
+                    <input type="tel" placeholder="Mobile Number" name="mobno" id="">
+                    <label for="tel">Address</label>
+                    <input type="text" placeholder="Address" name="loc" id="">
+                    <label for="subject">Get for</label>
+                    <select name="" id="">
+                        <option value="">School</option>
+                        <option value="">College</option>
+                        <option value="">Institution</option>
+                        <option value="">Coaching</option>
+                        <option value="">Personal</option>
+                        <option value="">Others</option>
+                    </select>
+                    <label for="subject">Choose Class</label>
+                    <select name="" id="">
+                        <option value="">Class 6</option>
+                        <option value="">Class 7</option>
+                        <option value="">Class 8</option>
+                        <option value="">Class 9</option>
+                        <option value="">Class 10</option>
+                        <option value="">Class 11</option>
+                        <option value="">Class 12</option>
+                    </select>
+                    <label for="subject">Choose Products</label>
+                    <select name="" id="">
+                        <option value="">Animation Video</option>
+                        <option value="">Graphic Templates</option>
+                        <option value="">Notes</option>
+                        <option value="">Exam Papers</option>
+                        <option value="">Tutorial Lectures</option>
+                    </select>
+                    <a href="#" class="enquiry-btn">Submit</a>
+                </form>
+            </div>
+        </div>
 
+    {% include 'product_app/related-products.html'%}
+    
     {% include 'product_app/pricing.html'%}
    
     <!-- Main Content -->
-    {% include 'product_app/related-products.html'%}
     
     
     <h2 class="sectionheader text-center">Popular Courses
@@ -58,7 +148,7 @@
            
             </div>
         </div>
-    </section>
+    </section> 
 
     <!-- Testimonial -->
     <h2 class="sectionheader text-center">Meet Our Team
@@ -67,20 +157,20 @@
     <div class="slide-container swiper">
         <div class="slide-content">
             <div class="card-wrapper swiper-wrapper">
+                
                 <div class="card swiper-slide">
                     <div class="image-content">
                         <span class="overlay"></span>
 
                         <div class="card-image">
-                            <img src="static/styles/Responsive Card Slider/images/profile1.jpg" alt="" class="card-img">
+                            <img src="static/styles/Responsive Card Slider/images/profile3.jpg" alt="" class="card-img">
                         </div>
                     </div>
 
                     <div class="card-content">
-                        <h2 class="name text-primary">David Dell</h2>
-                        <h3 class="name">Web Developer</h3>
-                        <p class="description">The lorem text the section that contains header with having open
-                            functionality.</p>
+                        <h2 class="name text-primary">Vijay Patidar</h2>
+                        <h3 class="name">Founder and CEO</h3>
+                        <p class="description">Currently understanding the marketing strategy to increase productivity.</p>
 
                         <button class="button">View More</button>
                     </div>
@@ -96,29 +186,13 @@
 
                     <div class="card-content">
                         <h2 class="name text-primary">Purushottam Patidar</h2>
-                        <h3 class="name">Web Developer & Backend Engineer</h3>
+                        <h3 class="name">Co-Founder and Developer</h3>
                         <p class="description">Pursuing Master Of Computer Application from NIT Trichy</p>
 
                         <button class="button">View More</button>
                     </div>
                 </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-
-                        <div class="card-image">
-                            <img src="static/styles/Responsive Card Slider/images/profile3.jpg" alt="" class="card-img">
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-                        <h2 class="name text-primary">Vijay Patidar</h2>
-                        <h3 class="name">CEO & Managing Director</h3>
-                        <p class="description">Currently understanding the marketing strategy to increase productivity.</p>
-
-                        <button class="button">View More</button>
-                    </div>
-                </div>
+                
                 <div class="card swiper-slide">
                     <div class="image-content">
                         <span class="overlay"></span>
@@ -131,6 +205,24 @@
                     <div class="card-content">
                         <h2 class="name text-primary">Drashti Bhatnagar</h2>
                         <h3 class="name">Managing Client & Schedule</h3>
+                        <p class="description">The lorem text the section that contains header with having open
+                            functionality.</p>
+
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="static/styles/Responsive Card Slider/images/profile1.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name text-primary">David Dell</h2>
+                        <h3 class="name">Web Developer</h3>
                         <p class="description">The lorem text the section that contains header with having open
                             functionality.</p>
 
