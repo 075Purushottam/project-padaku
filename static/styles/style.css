@@ -500,6 +500,8 @@ footer{
     }
     .mobile-enquiry{
         display: block;
+        margin: 25px auto;
+        width: 320px;
     }
     .res {
         display: block;
@@ -516,13 +518,23 @@ footer{
         font-size:10px;
         display:none;
     } */
-
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-height: 60%;
+        padding: 15px 0;
+    }
+    /* .hero-section div{
+        border: 2px solid black;
+    } */
     .hero-section h1 {
-        font-size: 28px;
+        font-size: 25px;
     }
     
     .hero-section p {
-        font-size: 20px;
+        font-size: 18px;
+        /* border: 2px solid black; */
     }
 
     .hero-section button {
@@ -532,15 +544,7 @@ footer{
         padding: 8px;
        }
 
-    .header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-direction: column;
-        max-height: 60%;
-        padding: 20px 0;
-    }
+    
     
     .features-section{
         display: flex;
