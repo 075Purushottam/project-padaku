@@ -4,7 +4,8 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualization Portal</title>
+    <title>Padaku | Home</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'styles/images/favicon-2.png' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
@@ -37,7 +38,7 @@
     <nav id="navbar">
         <div class="navheader">
             <div class="navlogo">
-                <img src="{% static 'styles\images\Padaku_small.png' %}" alt="Logo">
+                <a href="{% url 'home'%}"><img src="{% static 'styles\images\Padaku_small.png' %}" alt="Logo"></a>
                 <!-- <h2>Computer Science
                     <p>Everything you look for</p>
                 </h2> -->
@@ -48,10 +49,9 @@
                     <div class="dropdown">
                         <button class="dropbtn">Products <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-content">
-                            <a href="#">Animation Video</a>
-                            <a href="#">Notes with Mindmapping</a>
-                            <a href="#">English and hindi notes</a>
-                            <a href="#">Other classes</a>
+                            {% for product in products%}
+                            <a href="{% url 'product-page' product.id %}">{{product.title}}</a>
+                            {%endfor%}
                         </div>
                     </div>
                 </li>
@@ -90,10 +90,9 @@
                     <div class="dropdown">
                         <button class="dropbtn">Products <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-content">
-                            <a href="#">Animation Video</a>
-                            <a href="#">Notes with Mindmapping</a>
-                            <a href="#">English and hindi notes</a>
-                            <a href="#">Other classes</a>
+                            {% for product in products%}
+                            <a href="{% url 'product-page' product.id %}">{{product.title}}</a>
+                            {%endfor%}
                         </div>
                     </div>
                 </li>

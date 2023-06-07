@@ -22,6 +22,12 @@
     width: 100%;
     object-fit: cover;
 } */
+.product-title h2{
+    font-size: 28px;
+}
+.description p{
+    font-size: 24px;
+}
 .product-detail{
     width: 80%;
     border: 1px solid rgb(186, 128, 128);
@@ -67,27 +73,12 @@
     text-align: center;
 }
 
-.sec-header1 .hdrbtm{
-    width: 340px;
-    border-width: 4px;
+.sec-header .hdrbtm{
+    width: 20rem;
+    border-width: 2px;
     border-color: rgb(15, 140, 178);
-    border-radius: 5px;
-    margin: 10px;
 }
-.sec-header2 .hdrbtm{
-    width: 630px;
-    border-width: 4px;
-    border-color: rgb(15, 140, 178);
-    border-radius: 5px;
-    margin: 8px;
-}
-.sec-header3 .hdrbtm{
-    width: 510px;
-    border-width: 4px;
-    border-color: rgb(15, 140, 178);
-    border-radius: 5px;
-    margin: 8px;
-}
+
 
 .why-container{
     width: 80%;
@@ -151,9 +142,53 @@
         width: 100%;
     }
 
+    .purchase{
+        display: flex;
+        flex-direction: column;
+        margin: 2px;
+    }
     .purchase a{
         color: black;
         text-decoration: none;
     }
 	
+}
+
+/* Feature Card */
+.feature-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 40px auto;
+}
+.feature-card{
+       border: 1px solid black;
+       border-radius: 5px;
+       background-color: rgb(193, 208, 208);
+       width: fit-content;
+       height:fit-content;
+       margin:40px 15px;
+       padding: 25px 25px;
+}
+
+.feature-card ul li{
+    margin: 7px 7px;
+    font-size: 25px;
+}
+
+.feature-card i{
+    margin-right: 5px;
+}
+
+.comparison-table table{
+    width: 600px;
+    height: 400px;
+    margin: 60px auto;
+}
+
+table tr,th,td{
+    border: 1px solid black;
+    text-align: center;
 }

@@ -108,9 +108,21 @@
             </div>
         </div>
 
-    {% include 'product_app/related-products.html'%}
     
-    {% include 'product_app/pricing.html'%}
+    <h2 class="sectionheader text-center">Products & Services
+        <hr class="hdrbtm">
+    </h2>
+    <section class="features-section">
+        {% for product in products %}
+        <div class="feature-box">
+            <img src="{{product.product_image}}" alt="Feature 1">
+            <h2>{{product.title}}</h2>
+            <p>{{product.description}}</p>
+            <a href="{% url 'product-page' product.id %}" class="course-btn">View</a>
+        </div>
+        {%endfor%}
+    </section>
+    
    
     <!-- Main Content -->
     
@@ -221,8 +233,8 @@
                     </div>
 
                     <div class="card-content">
-                        <h2 class="name text-primary">David Dell</h2>
-                        <h3 class="name">Web Developer</h3>
+                        <h2 class="name text-primary">Rahul Gorana</h2>
+                        <h3 class="name">Web and App Developer</h3>
                         <p class="description">The lorem text the section that contains header with having open
                             functionality.</p>
 

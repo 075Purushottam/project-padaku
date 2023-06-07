@@ -4,9 +4,17 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
+from .models import Product
+
 
 def home(request):
-    return render(request,'product_app/home.html')
+    products = Product.objects.all()
+
+    for prod in products:
+        prod.description = prod.description[:60]
+    
+    context = {'products':products}
+    return render(request,'product_app/home.html',context) 
 
 def loginPage(request):
     page='login'
@@ -51,8 +59,11 @@ def logoutUser(request):
     logout(request)
     return redirect('home')
 
-def productPage(request):
-    return render(request,'product_app/product-page.html')
+def productPage(request,pk):
+    product = Product.objects.get(id=pk)
+    features = product.features_set.all()
+    context = {'product':product,'features':features}
+    return render(request,'product_app/product-page.html',context)
 
 def enquiryPage(request):
     return render(request,'product_app/enquiry.html')

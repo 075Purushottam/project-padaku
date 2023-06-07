@@ -55,7 +55,7 @@ li{
     position: absolute;
     border-radius: 4px;
     background-color: rgba(213, 213, 213, 0.7);
-    min-width: 180px;
+    min-width: 260px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -290,20 +290,23 @@ li{
     margin: 10px auto;
 }
 .features-section {
-    display: flex;
+    display: grid;
     justify-content:center;
+    grid-template-columns: auto auto auto auto;
     align-items: center;
     margin-top: 30px;
-    gap: 5px;
+    row-gap: 10px;
+    column-gap: 10px;
 }
  
 .feature-box {
-    flex-basis: 280px;
-    min-height: 370px;
-    max-height: 350px;
+    /* flex-basis: 250px; */
+    max-width: 270px;
+    min-height: 350px;
+    max-height: 3500px;
     padding: 20px;
-    border: #949494 2px solid;
-    border-radius: 2px;
+    border: #4070F4 2px solid;
+    border-radius: 4px;
     text-align: center;
 }
 .feature-box:hover{
@@ -315,7 +318,7 @@ li{
     width: 100%;
     max-height: 200px;
     min-height: 200px;
-    border-radius: 2px;
+    border-radius: 7px;
     border: #949494 1px solid;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -334,13 +337,13 @@ li{
 }
 .feature-box a{
     font-size:15px;
-    border-radius: 2px;
-    margin-bottom: 4px;
+    border-radius: 3px;
+    margin: 5px;
     padding: 4px 18px;
 }
 .feature-box a:hover{
     color: #FFF;
-    background: #6c757d;
+    background: #104574;
 }
 /* Courses Section */
 .courses-section {
@@ -561,9 +564,9 @@ footer{
 
     .feature-box img {
         width: 100%;
-        border: #949494 8px solid;
+        border: #747a7f 5px solid;
         border-radius: 3px;
-        min-height: fit-content;
+        max-height: fit-content;
         margin-bottom: 12px;
     }
     
@@ -678,7 +681,7 @@ footer{
         position: absolute;
         border-radius: 4px;
         background-color: #0878a0;
-        min-width: 180px;
+        min-width: 260px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
       }
