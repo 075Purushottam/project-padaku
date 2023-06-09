@@ -10,6 +10,7 @@ urlpatterns = [
     path('register/',views.registerPage,name='register'),
     path('product/<str:pk>/',views.productPage,name='product-page'),
     path('enquiry/',views.enquiryPage,name='enquiry-page'),
+    path('aboutus/',views.aboutPage,name='about-page'),
 
 ]
 

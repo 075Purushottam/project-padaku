@@ -69,7 +69,8 @@ li{
   }
   
   .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color:#00425A;
+    color: #f1f1f1;
 }
   
   .dropdown:hover .dropdown-content {
@@ -149,15 +150,13 @@ li{
     flex-direction: row;
     background:url(images/main4.jpg) center center/cover no-repeat;
     color: #FFF;
-    height:90%;
+    height:100%;
     box-shadow: 0 4px 2px -3px rgb(231, 231, 231);
 }
 .hero-section {
-    /* border: 4px solid red; */
     width: fit-content;
     height: fit-content;
     overflow:auto;
-    /* padding: 50px 24px; */
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 40px;
@@ -234,56 +233,86 @@ li{
     background-color: white;
     height: fit-content;
     width: 380px;
-    border: #0f1232 2px solid;
-    /* margin: 40px auto; */
-    /* margin-right:0;
-    margin-left: auto; */
+    border: #00425A 1px solid;
+    border-radius: 8px;
     margin-left: auto;
     margin-right: 40px;
     margin-top: auto;
     margin-bottom: auto;
-
+    background:rgba(213, 213, 213, 0.7);
+    backdrop-filter: blur(2px);
 }
+
 .single-enquiry{
      margin: 40px auto; 
 }
 .enquiry-form label{
     color: #000;
-    font-weight: 600;
+    margin: 0;
+    font-weight: 500;
 }
-.enquiry-form input,select{
+/* .enquiry-form input,select{
     background: transparent;
-}
+} */
 .enquiry-btn{
-    width: fit-content;
-    background:#004780;
-    color: white;
+    width: 100%;
+    color: #00425A;
     padding: 5px 15px;
 }
 .form-section a{
     margin:5px auto;
+    border-radius: 4px;
 }
+
 .enquiry-btn:hover{
     color: white;
     background:#206fb0;
 }
 
 .enquiry-form h3{
+    font-size: 32px;
+    color:#00425A;
+}
+.enquiry-form h3 p{
     font-size: 24px;
     color:#00425A;
+    font-weight:400;
 }
 
 .enquiry-form form input{
-    border-left:none;
-    border-right:none;
-    border-top:none;
-    border-bottom: 1px solid black;
+    border: 1px solid #00425A;
+    width: 100%;
+    color: #00425A;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 4px 7px;
+    background-color: transparent;
+    margin-bottom:10px;
+}
+.enquiry-form form input:focus{
+    background-color: rgb(195, 195, 195);
+}
+/* .enquiry-form form select:focus{
+    border: 2px solid #00425A;
+} */
+.enquiry-form form select{
+    border: 1px solid #00425A;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: transparent;
+    margin-bottom:5px;
+}
+
+form input::placeholder{
+    color: #000;
+    font-weight: 100;
 }
 
 /* Features Section */
 
 .sectionheader{
     margin-top: 45px;
+    font-size: 40px;
 }
 .hdrbtm{
     width: 150px;
@@ -305,7 +334,8 @@ li{
     min-height: 350px;
     max-height: 3500px;
     padding: 20px;
-    border: #4070F4 2px solid;
+    border: #00425A 2px solid;
+    background-color: #1e2843;
     border-radius: 4px;
     text-align: center;
 }
@@ -330,20 +360,24 @@ li{
 .feature-box h2 {
     font-size: 20px;
     margin-bottom: 10px;
+    color: aliceblue;
 }
 
 .feature-box p {
     font-size: 12px;
+    color: aliceblue;
 }
 .feature-box a{
     font-size:15px;
     border-radius: 3px;
     margin: 5px;
     padding: 4px 18px;
+    background-color: aliceblue;
+    color: #00425A;
 }
 .feature-box a:hover{
-    color: #FFF;
-    background: #104574;
+    background-color: #515f7c;
+    color: aliceblue;
 }
 /* Courses Section */
 .courses-section {
@@ -390,7 +424,7 @@ li{
 .course-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #005DA0;
+    background-color: #00425A;
     color: #FFF;
     font-size: 16px;
     font-weight: bold;
@@ -411,7 +445,6 @@ footer {
     color: #000;
     padding: 20px;
     text-align: center;
-    margin-top: 60px;
 }
 
   
@@ -423,8 +456,7 @@ footer {
     flex-direction: row;
     border:#949494 1px solid ;
     border-radius: 2px;
-    margin-left:auto;
-    margin-right:auto;
+    margin: 40px auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	-webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -504,7 +536,7 @@ footer{
     .mobile-enquiry{
         display: block;
         margin: 25px auto;
-        width: 320px;
+        width: 350px;
     }
     .res {
         display: block;
@@ -605,7 +637,7 @@ footer{
    .formdiv{
     display: flex;
     flex-direction: column;
-    margin: 0 15px;
+    margin: 40px 15px;
    }
 
    .form-detail h3{
@@ -613,11 +645,20 @@ footer{
     }
 
     .form-section h3{
-        font-size: 20px;
+        font-size: 32px;
     }
 
+    .form-section h3 p{
+        font-size: 24px;
+        font-weight: 400;
+    }
     .form-section form label{
-        font-size:12px;
+        font-size:16px;
+    }
+
+    .form-section .feedback-btn{
+        width: 100%;
+        margin: 5px 5px;
     }
 
     .social-media{
@@ -631,10 +672,15 @@ footer{
     .social-media li{
         padding: 5px;
     }
+
+  
   }
 
   @media only screen and (max-width: 500px){
-  
+    .sectionheader{
+        font-size: 28px;
+    }
+   
     .feature-box {
         width: 350px;
         box-shadow: none;

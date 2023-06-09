@@ -1,48 +1,35 @@
 {% extends 'main.html'%}
 {% block content%}
-
+<style>
+    h6{
+        font-size: larger;
+        color: #00425A ;
+    }
+    @media (max-width: 768px){
+        h6{
+        font-size: small;
+    }
+    }
+</style>
+<h6 class="text-center my-4 mx-4">Once we receive your details through the form, our team will review the information and aim to respond to you in a timely manner. We understand the importance of addressing your needs and queries promptly.</h6>
 <div class="enquiry-form single-enquiry">
     <div class="form-section">
-        <form action="">
-            <h3>Get Enquiry</h3>
-            <label for="fullname">Full Name</label>
-            <input type="text" placeholder="Username" name="fullname">
-            <label for="email">Email Address</label>
-            <input type="email" placeholder="Email" name="email" id="">
-            <label for="tel">Mobile Number</label>
-            <input type="tel" placeholder="Mobile Number" name="mobno" id="">
-            <label for="tel">Address</label>
-            <input type="text" placeholder="Address" name="loc" id="">
-            <label for="subject">Get for</label>
-            <select name="" id="">
-                <option value="">School</option>
-                <option value="">College</option>
-                <option value="">Institution</option>
-                <option value="">Coaching</option>
-                <option value="">Personal</option>
-                <option value="">Others</option>
-            </select>
-            <label for="subject">Choose Class</label>
-            <select name="" id="">
-                <option value="">Class 6</option>
-                <option value="">Class 7</option>
-                <option value="">Class 8</option>
-                <option value="">Class 9</option>
-                <option value="">Class 10</option>
-                <option value="">Class 11</option>
-                <option value="">Class 12</option>
-            </select>
-            <label for="subject">Choose Products</label>
-            <select name="" id="">
-                <option value="">Animation Video</option>
-                <option value="">Graphic Templates</option>
-                <option value="">Notes</option>
-                <option value="">Exam Papers</option>
-                <option value="">Tutorial Lectures</option>
-            </select>
-            <a href="#" class="enquiry-btn">Submit</a>
+        
+        <form method="POST">
+            {% csrf_token%}
+            <h3>Get Enquiry <p>to know more about products</p> </h3>
+            <ul class="messages">
+                {% for message in messages %}
+                <p class="text-success text-center">{{ message }}</p>
+                {% endfor %}
+            </ul>
+            {% csrf_token %}
+            {{form}}
+           <input class="enquiry-btn" name="enquiryform" type="submit">
         </form>
     </div>
+
+    
 </div>
 
 {% endblock content %}

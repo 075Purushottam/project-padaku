@@ -55,15 +55,14 @@
                         </div>
                     </div>
                 </li>
-                <li><a  href="#pricing">Pricing</a></li>
-                <li><a  href="#">About Us</a></li>
+                <!-- <li><a  href="#pricing">Pricing</a></li> -->
+                <li><a  href="{% url 'about-page'%}">About Us</a></li>
                 <li><a  href="#customer-review">Review</a></li>
                 <li><a  href="#footer">Contact Us</a></li>
             </ul>
             {% if request.user.is_authenticated %}
-            <p class="my-auto text-primary username">{{request.user|upper}}</p>
-            <div class="btns"><a href="{% url 'logout'%}">Logout</a>
-                
+            <p class="my-auto text-success username">{{request.user|upper}}</p>
+            <div class="btns"><a href="{% url 'logout'%}">Logout</a>  
             </div>
             {% else %}
             <div class="btns"><a href="{% url 'login'%}">Login</a>
@@ -80,11 +79,21 @@
             <a href="#home" id="logo">
                 
                 <div class="navlogo">
-                    <img src="{% static 'styles\images\Padaku_small.png' %}" alt="Logo">
+                    <a href="{% url 'home'%}"><img src="{% static 'styles\images\Padaku_small.png' %}" alt="Logo"></a>
+                    <!-- <img src="{% static 'styles\images\Padaku_small.png' %}" alt="Logo"> -->
                 </div>
             </a>
             <i class="fa fa-bars" id="ham-menu"></i>
             <ul id="nav-bar">
+                {% if request.user.is_authenticated %}
+            <p style="color: aliceblue; border-bottom: 1px solid aliceblue;" class="text-success">"Welcome {{request.user|upper}} to our website"</p>
+            <div><a  class="text-info" href="{% url 'logout'%}">Logout</a>  
+            </div>
+            {% else %}
+            <div><a class="text-info" href="{% url 'login'%}">Login</a>
+                <a class="text-info" href="{% url 'register'%}">Signup</a>
+            </div>
+                {%endif%}
                 <li><a href="{% url 'home'%}">Home</a> </li>
                 <li>
                     <div class="dropdown">
@@ -97,7 +106,7 @@
                     </div>
                 </li>
                 <li><a href="{%url 'enquiry-page' %}">Enquiry now</a> </li>
-                <li><a href="#footer">About</a> </li>
+                <li><a href="{% url 'about-page'%}">About</a> </li>
                 <li><a href="static\styles\brochure\Database Security.docx" download>Download Brochure</a></li>
                
                 <li><a href="#footer">Contact</a> </li>
@@ -146,7 +155,7 @@
 
     <!-- JAVA-SCRIPT SECTION -->
 
-<script>
+<!-- <script>
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
 
@@ -158,7 +167,7 @@
     }
 
 
-</script>
+</script> -->
 <script>
     let hamMenuIcon = document.getElementById("ham-menu");
     let navBar = document.getElementById("nav-bar");

@@ -18,46 +18,21 @@
         </div>
         <!-- <img src="static\styles\images\main5.jpg" alt=""> -->
         <div class="enquiry-form web-enq">
+            {% if messages %}
             
+            {% endif %}
             <div class="form-section">
-                <form action="">
-                    <h3>Get Enquiry</h3>
-                    <label for="fullname">Full Name</label>
-                    <input type="text" placeholder="Username" name="fullname">
-                    <label for="email">Email Address</label>
-                    <input type="email" placeholder="Email" name="email" id="">
-                    <label for="tel">Mobile Number</label>
-                    <input type="tel" placeholder="Mobile Number" name="mobno" id="">
-                    <label for="tel">Address</label>
-                    <input type="text" placeholder="Address" name="loc" id="">
-                    <label for="subject">Get for</label>
-                    <select name="" id="">
-                        <option value="">School</option>
-                        <option value="">College</option>
-                        <option value="">Institution</option>
-                        <option value="">Coaching</option>
-                        <option value="">Personal</option>
-                        <option value="">Others</option>
-                    </select>
-                    <label for="subject">Choose Class</label>
-                    <select name="" id="">
-                        <option value="">Class 6</option>
-                        <option value="">Class 7</option>
-                        <option value="">Class 8</option>
-                        <option value="">Class 9</option>
-                        <option value="">Class 10</option>
-                        <option value="">Class 11</option>
-                        <option value="">Class 12</option>
-                    </select>
-                    <label for="subject">Choose Products</label>
-                    <select name="" id="">
-                        <option value="">Animation Video</option>
-                        <option value="">Graphic Templates</option>
-                        <option value="">Notes</option>
-                        <option value="">Exam Papers</option>
-                        <option value="">Tutorial Lectures</option>
-                    </select>
-                    <a href="#" class="enquiry-btn">Submit</a>
+                <form method="POST">
+                    {% csrf_token%}
+                    <h3>Get Enquiry <p>to know more about products</p> </h3>
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <p class="text-success text-center">{{ message }}</p>
+                        {% endfor %}
+                    </ul>
+                    {% csrf_token %}
+                    {{form}}
+                    <input class="enquiry-btn" name="enquiryform" type="submit">
                 </form>
             </div>
         </div>
@@ -66,52 +41,25 @@
     
         <div class="mobile-enquiry enquiry-form">
             <div class="form-section">
-                <form action="">
-                    <h3>Get Enquiry</h3>
-                    <label for="fullname">Full Name</label>
-                    <input type="text" placeholder="Username" name="fullname">
-                    <label for="email">Email Address</label>
-                    <input type="email" placeholder="Email" name="email" id="">
-                    <label for="tel">Mobile Number</label>
-                    <input type="tel" placeholder="Mobile Number" name="mobno" id="">
-                    <label for="tel">Address</label>
-                    <input type="text" placeholder="Address" name="loc" id="">
-                    <label for="subject">Get for</label>
-                    <select name="" id="">
-                        <option value="">School</option>
-                        <option value="">College</option>
-                        <option value="">Institution</option>
-                        <option value="">Coaching</option>
-                        <option value="">Personal</option>
-                        <option value="">Others</option>
-                    </select>
-                    <label for="subject">Choose Class</label>
-                    <select name="" id="">
-                        <option value="">Class 6</option>
-                        <option value="">Class 7</option>
-                        <option value="">Class 8</option>
-                        <option value="">Class 9</option>
-                        <option value="">Class 10</option>
-                        <option value="">Class 11</option>
-                        <option value="">Class 12</option>
-                    </select>
-                    <label for="subject">Choose Products</label>
-                    <select name="" id="">
-                        <option value="">Animation Video</option>
-                        <option value="">Graphic Templates</option>
-                        <option value="">Notes</option>
-                        <option value="">Exam Papers</option>
-                        <option value="">Tutorial Lectures</option>
-                    </select>
-                    <a href="#" class="enquiry-btn">Submit</a>
+                <form method="POST">
+                    {% csrf_token%}
+                    <h3>Get Enquiry <p>to know more about products</p> </h3>
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <p class="text-success text-center">{{ message }}</p>
+                        {% endfor %}
+                    </ul>
+                    {% csrf_token %}
+                    {{form}}
+                    <input class="enquiry-btn" name="enquiryform" type="submit">
                 </form>
             </div>
         </div>
 
     
-    <h2 class="sectionheader text-center">Products & Services
+    <h1 class="sectionheader text-center">Products & Services
         <hr class="hdrbtm">
-    </h2>
+    </h1>
     <section class="features-section">
         {% for product in products %}
         <div class="feature-box">
@@ -127,9 +75,9 @@
     <!-- Main Content -->
     
     
-    <h2 class="sectionheader text-center">Popular Courses
+    <h1 class="sectionheader text-center">Popular Courses
         <hr class="hdrbtm">
-    </h2>
+    </h1>
     <section class="courses-section">
       
         <div class="course-card">
@@ -163,9 +111,9 @@
     </section> 
 
     <!-- Testimonial -->
-    <h2 class="sectionheader text-center">Meet Our Team
+    <h1 class="sectionheader text-center">Meet Our Team
         <hr class="hdrbtm">
-    </h2>
+    </h1>
     <div class="slide-container swiper">
         <div class="slide-content">
             <div class="card-wrapper swiper-wrapper">
@@ -259,9 +207,9 @@
         <div class="container ">
             <div class="row mb-5 ">
                 <div class="col-12 text-center">
-                    <h2 class="sectionheader">Customer Review
+                    <h1 class="sectionheader">Customer Review
                         <hr class="hdrbtm">
-                    </h2>
+                    </h1>
                 </div>
             </div>
         </div>
@@ -275,44 +223,44 @@
 
                     <div class="media-29101">
                         <img src="static/styles/Customer Review/images/person_1_sm.jpg" alt="Image" class="img-fluid">
-                        <h3><a href="#">Alex Fought</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem iusto officia! Quis
-                            tenetur maxime, laboriosam saepe, voluptate necessitatibus tempora!</p>
+                        <h3><a href="#">Maduri Sharma</a></h3>
+                        <p>I recently came across the Padaku website, and I must say it has been a game-changer for my child's learning journey. 
+                            The study materials and animation videos provided by Padaku are simply outstanding.</p>
                     </div>
 
                     <div class="media-29101">
                         <img src="static/styles/Customer Review/images/person_2_sm.jpg" alt="Image" class="img-fluid">
-                        <h3><a href="#">Ben Stafford</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem iusto officia! Quis
-                            tenetur maxime, laboriosam saepe, voluptate necessitatibus tempora!</p>
+                        <h3><a href="#">Riya Verma</a></h3>
+                        <p>The study materials cover a wide range of subjects and are tailored for students from KG to 12th grade.
+                             They are comprehensive, well-organized, and easy to understand. The content is presented in a concise and engaging manner.</p>
                     </div>
 
                     <div class="media-29101">
                         <img src="static/styles/Customer Review/images/person_3_sm.jpg" alt="Image" class="img-fluid">
-                        <h3><a href="#">Devin Bridges</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem iusto officia! Quis
-                            tenetur maxime, laboriosam saepe, voluptate necessitatibus tempora!</p>
+                        <h3><a href="#">Rahul Dixit</a></h3>
+                        <p>What sets Padaku apart is their brilliant use of animation videos. 
+                            These videos bring the subjects to life and make learning a truly enjoyable experience for my child.
+                            The visuals are vibrant, of animation are good.</p>
                     </div>
 
                     <div class="media-29101">
                         <img src="static/styles/Customer Review/images/person_1_sm.jpg" alt="Image" class="img-fluid">
-                        <h3><a href="#">Joshua Jones</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem iusto officia! Quis
-                            tenetur maxime, laboriosam saepe, voluptate necessitatibus tempora!</p>
+                        <h3><a href="#">Ananya Raj</a></h3>
+                        <p>Padaku's study materials have greatly complemented my child's classroom learning.
+                             They have helped improve my child's understanding of various subjects and have  boosted their academic performance.</p>
                     </div>
 
                     <div class="media-29101">
                         <img src="static/styles/Customer Review/images/person_2_sm.jpg" alt="Image" class="img-fluid">
-                        <h3><a href="#">Kellie Kenney</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem iusto officia! Quis
-                            tenetur maxime, laboriosam saepe, voluptate necessitatibus tempora!</p>
+                        <h3><a href="#">Vaishali Patel</a></h3>
+                        <p>I also appreciate the fact that Padaku regularly updates its content to ensure it aligns with the latest curriculum standards.
+                             This commitment to staying up-to-date reflects their dedication to providing relevant study materials.</p>
                     </div>
 
                     <div class="media-29101">
                         <img src="static/styles/Customer Review/images/person_3_sm.jpg" alt="Image" class="img-fluid">
-                        <h3><a href="#">Will Reagan</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, dolorem iusto officia! Quis
-                            tenetur maxime, laboriosam saepe, voluptate necessitatibus tempora!</p>
+                        <h3><a href="#">Akshay Raj</a></h3>
+                        <p>The customer support provided by Padaku is exceptional. Anytime I had a question or needed assistance, their support team responded promptly and resolved the issue efficiently. It's reassuring to know that help is just a click away.</p>
                     </div>
 
                 </div>
@@ -324,6 +272,9 @@
 
 
 
+    <h1 class="sectionheader text-center">Provide Feedback
+        <hr class="hdrbtm">
+    </h1>
 
     <!--end of customer review  -->
     <section>
@@ -337,16 +288,18 @@
 
             </div>
             <div class="form-section">
-                <form action="">
+                <form method="POST">
                     <h3>Drop your message here</h3>
-                    <label for="fullname">Full Name</label>
-                    <input type="text" name="fullname">
-                    <label for="email">Email Address</label>
-                    <input type="email" name="email" id="">
-                    <label for="subject">Subject</label>
-                    <input type="text" name="" id="">
-                    <label for="message">Message</label>
-                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <p class="text-success text-center">{{ message }}</p>
+                        {% endfor %}
+                    </ul>
+
+                    {% csrf_token %}
+                    {{fform}}
+                    <input class="enquiry-btn feedback-btn" name="feedbackform" type="submit">
+                    
                 </form>
             </div>
         </div>
