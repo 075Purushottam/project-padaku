@@ -84,8 +84,9 @@
       align-items: center;
       text-align: center;
       justify-content: flex-start;
+      height: fit-content;
       transition: 1s;
-      padding-top: 30px;
+      padding: 40px 0px;
     }
 
     .nav-bar li .dropbtn {

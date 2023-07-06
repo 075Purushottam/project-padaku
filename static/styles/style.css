@@ -446,7 +446,9 @@ footer {
     padding: 20px;
     text-align: center;
 }
-
+.row{
+    justify-content: center;
+}
   
 /* contact/enquiry secction */
 
@@ -525,7 +527,7 @@ a{
 }
 
 footer{
-    background-color: #47484a;
+    background-color: #004780;
     color: white;
 }
 @media only screen and (max-width: 700px) {
@@ -637,7 +639,7 @@ footer{
    .formdiv{
     display: flex;
     flex-direction: column;
-    margin: 40px 15px;
+    margin: 40px 0px;
    }
 
    .form-detail h3{
@@ -709,9 +711,18 @@ footer{
         margin: 0 25px;
        }
 
-       .dropbtn {
+       .dropdown-content {
+        display: none;
+      }
+      
+      .dropdown.show .dropdown-content,
+      #prod-btn.active + .dropdown-content {
+        display: block;
+      }
+      
+        .dropbtn {
         color:white;
-        font-size: 18px;
+        font-size: 16px;
         padding: 7px;
         border: none;
         cursor: pointer;
@@ -722,23 +733,26 @@ footer{
         display: inline-block;
       }
       
-      .dropdown-content {
+     .dropdown-content {
         display: none;
-        position: absolute;
+        position: relative;
         border-radius: 4px;
         background-color: #0878a0;
         min-width: 260px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
       }
+
       .dropdown-content a{
         font-size: small;
       }
     
       
       .dropdown-content a:hover {
-        background-color: #0878a0;
+        background-color: #0878a0;   
     }
+
+   
       
    
   }

@@ -61,7 +61,7 @@
                 <li><a  href="#footer">Contact Us</a></li>
             </ul>
             {% if request.user.is_authenticated %}
-            <p class="my-auto text-success username">{{request.user|upper}}</p>
+            <p class="text-success username">{{request.user|upper}}</p>
             <div class="btns"><a href="{% url 'logout'%}">Logout</a>  
             </div>
             {% else %}
@@ -97,8 +97,8 @@
                 <li><a href="{% url 'home'%}">Home</a> </li>
                 <li>
                     <div class="dropdown">
-                        <button class="dropbtn">Products <i class="fa fa-caret-down"></i></button>
-                        <div class="dropdown-content">
+                        <button class="dropbtn" id="prod-btn">Products <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content" id="dd">
                             {% for product in products%}
                             <a href="{% url 'product-page' product.id %}">{{product.title}}</a>
                             {%endfor%}
@@ -124,25 +124,19 @@
         <div id="footer" class="container">
           <div class="row">
             <div class="col-md-4">
-              <h5 class="text-primary border-bottom mb-4">About Us</h5>
-              <p>We are a product based company that creates innovative and user-friendly products. 
+              <h5 class="mb-4">About Us</h5>
+              <p class="mb-5">We are a product based company that creates innovative and user-friendly products. 
                 We are passionate about our work and we are committed to providing our customers with the best possible experience.</p>
             </div>
             <div class="col-md-4">
-              <h5 class="text-primary border-bottom mb-5">Contact Us</h5>
+              <h5 class="mb-4">Contact Us</h5>
               <ul>
                 <li>Email: <a href="mailto:padaku222@gmail.com">padaku222@gmail.com</a></li>
                 <li>Phone: +918823083040</li>
                 <li>Address: 123 Main Street, Indore, Madhaya Pradesh</li>
               </ul>
             </div>
-            <div class="col-md-4">
-              <h5 class="text-primary border-bottom mb-4">Follow Us</h5>
-              <ul class="social-media">
-                <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
-                <li><a href="#"><i class="fa fa-google"></i></a></li>
-              </ul>
-            </div>
+            
           </div>
           <div class="copyright ">
             <p class="border-bottom">&copy; 2023 Padaku.edu All rights reserved.</p>
@@ -183,6 +177,29 @@
             hamMenuIcon.classList.toggle("fa-times");
         });
     });
+
+    // product dropdown
+    document.addEventListener('DOMContentLoaded', function() {
+  var prodBtn = document.getElementById('prod-btn');
+  var dd = document.getElementById('dd');
+  var dropdown = document.querySelector('.dropdown');
+  
+
+  prodBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if(document.querySelector('.show')==null){
+        dd.classList.toggle('show');
+        dd.style.display='block';
+    }else{
+        dd.classList.remove('show');
+        dd.style.display='none';
+    }
+    
+  });
+
+});
+
+
 </script>
 </body>
 
