@@ -85,7 +85,9 @@ li{
     line-height: 0.2;
     text-align: center; 
     color: #00425A;
+    margin-right: auto;
 }
+
 
 .navlogo h2{
     font-size:24px;
@@ -95,6 +97,14 @@ li{
     font-size: 15px;
 }
 
+a.text-info.ham-btn {
+    margin: 5px;
+    border: 2px solid aliceblue;
+    padding: 5px 12px;
+    font-size: 15px;
+    border-radius: 2px;
+    font-weight: 300;
+}
 
 .navlogo img {
     width: 200px;

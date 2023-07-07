@@ -81,6 +81,18 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'Padaku',
+#         'HOST': 'project-padaku.cn979b58kxfy.ap-southeast-2.rds.amazonaws.com',
+#         'USER':'admin',
+#         'PASSWORD':'01#ProjectPadaku',
+#         'PORT':'3306',
+#     }
+# }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
