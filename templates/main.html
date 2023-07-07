@@ -87,7 +87,7 @@
             <ul id="nav-bar">
                 {% if request.user.is_authenticated %}
             <p style="color: aliceblue; border-bottom: 1px solid aliceblue;" class="text-success">"Welcome {{request.user|upper}} to our website"</p>
-            <div><a  class="text-info" href="{% url 'logout'%}">Logout</a>  
+            <div><a  class="text-info ham-btn" href="{% url 'logout'%}">Logout</a>  
             </div>
             {% else %}
             <div><a class="text-info ham-btn" href="{% url 'login'%}">Login</a>
