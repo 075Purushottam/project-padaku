@@ -342,6 +342,7 @@ form input::placeholder{
 }
  
 .feature-box {
+    /* flex-basis: 250px; */
     max-width: 270px;
     min-height: 350px;
     max-height: 3500px;
@@ -406,9 +407,10 @@ form input::placeholder{
 .course-card {
     /* flex-basis: 300px; */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 20px;
     text-align: center;
+    border: 1px solid #00425A;
     margin-bottom: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -416,7 +418,7 @@ form input::placeholder{
 .course-card img {
     width: 100%;
     max-height: 300px;
-    max-width: 60%;
+    max-width: 42%;
     object-fit: cover;
 }
 .course-card div{
@@ -445,7 +447,7 @@ form input::placeholder{
 }
 
 .course-btn:hover {
-    background-color: #004780;
+    background-color: #00425A;
     color: #FFF;
 }
 
@@ -509,7 +511,6 @@ font-size: 25px;
 
 .form-section h3{
     color: #00425A;
-    margin: 0px;
 }
 
 .formdiv form input{
@@ -572,18 +573,18 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-height: 60%;
+        max-height: 55%;
         padding: 15px 0;
     }
     /* .hero-section div{
         border: 2px solid black;
     } */
     .hero-section h1 {
-        font-size: 32px;
+        font-size: 24px;
     }
     
     .hero-section p {
-        font-size: 24px;
+        font-size: 16px;
     }
 
     .hero-section button {
@@ -687,7 +688,6 @@ footer{
     .social-media li{
         padding: 5px;
     }
-
   
   }
 
