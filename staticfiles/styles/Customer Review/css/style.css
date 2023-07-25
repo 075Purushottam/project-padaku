@@ -31,13 +31,13 @@ h2 {
 
 .owl-carousel {
   padding-top: 25px;
-  border-top: #007bff 1px solid;
-  border-bottom: #007bff 1px solid;
+  border-top: #6c757d 1px solid;
+  border-bottom: #6c757d 1px solid;
 }
 
 .media-29101 {
   text-align: center;
-  border: #6c757d 2px solid;
+  border: #00425A 2px solid;
   padding: 4px;
 }
 
@@ -88,7 +88,7 @@ h2 {
 }
 
 .owl-2-style .owl-dots .owl-dot.active span {
-  background: #007bff;
+  background: #00425A;
 }
 
 .owl-2-style .owl-dots .owl-dot:active,
@@ -97,9 +97,7 @@ h2 {
 }
 
 
-.owl-2 {
 
-}
 /* social media handler */
 
 /* 
