@@ -101,4 +101,5 @@ def enquiryPage(request):
     return render(request,'product_app/enquiry.html',context)
 
 def aboutPage(request):
-    return render(request,'product_app/about.html')
+    products = Product.objects.all()
+    return render(request,'product_app/about.html',{'products':products})

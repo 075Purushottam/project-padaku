@@ -1,20 +1,19 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Padaku | Home</title>
+    <link rel="shortcut icon" href="#">
     <link rel="icon" type="image/x-icon" href="{% static 'styles/images/favicon-2.png' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/nav.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/login_register.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/product.css' %}">
 
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" /> -->
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="{% static 'styles/Responsive Card Slider/css/swiper-bundle.min.css' %}">
 
@@ -69,7 +68,7 @@
                 <a href="{% url 'register'%}">Signup</a>
             </div>
             {%endif%}
-            <a href="https://wa.me/918517949579"><i class="fa fa-whatsapp text-success"></i></a>
+            <a href="https://wa.me/919644851884"><i class="fa fa-whatsapp text-success"></i></a>
             
         </div>
     </nav>
@@ -90,7 +89,7 @@
             <div><a  class="text-info ham-btn" href="{% url 'logout'%}">Logout</a>  
             </div>
             {% else %}
-            <div><a class="text-info ham-btn" href="{% url 'login'%}">Login</a>
+            <div class="login-section"><a class="text-info ham-btn" href="{% url 'login'%}">Login</a>
                 <a class="text-info ham-btn" href="{% url 'register'%}">Signup</a>
             </div>
                 {%endif%}
@@ -107,13 +106,13 @@
                 </li>
                 <li><a href="{%url 'enquiry-page' %}">Enquiry now</a> </li>
                 <li><a href="{% url 'about-page'%}">About</a> </li>
-                <li><a href="static\styles\brochure\Database Security.docx" download>Download Brochure</a></li>
+                <li><a href="static\styles\brochure\padaku_brochure.pdf" download>Download Brochure</a></li>
                
                 <li><a href="#footer">Contact</a> </li>
+                <li><a href="https://wa.me/919644851884"><i class="fa fa-whatsapp text-success"></i></a></li>
             </ul>
         </nav>
     </header>
-
    
 {% block content%}
 {% endblock content%}
@@ -131,9 +130,9 @@
             <div class="col-md-4">
               <h5 class="mb-4">Contact Us</h5>
               <ul>
-                <li>Email: <a href="mailto:padaku222@gmail.com" style="color: aliceblue;">padaku222@gmail.com</a></li>
-                <li>Phone: +918823083040</li>
-                <li>Address: 123 Main Street, Indore, Madhaya Pradesh</li>
+                <li>Email: <a href="mailto:supprt.padaku@gmail.com" style="color: aliceblue;">supprt.padaku@gmail.com</a></li>
+                <li>Phone: +919644851884</li>
+                <li>Address: 01, Malviya Nagar, Patel Tower, Jaipur Rajasthan</li>
               </ul>
             </div>
             

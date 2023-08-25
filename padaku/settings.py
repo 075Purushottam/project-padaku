@@ -25,7 +25,9 @@ SECRET_KEY = 'zujazm(uag)nxpgop62#9-z7#m)n$^i!cyr!y8fv&1_bmze)25'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+# ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = ['52.65.137.116','www.padaku.org','padaku.org']
+
 
 CSRF_TRUSTED_ORIGINS = ['https://*','http://*','https://padaku.org','https://www.padaku.org']
 CSRF_COOKIE_SECURE = True
